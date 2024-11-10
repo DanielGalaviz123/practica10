@@ -3,7 +3,7 @@ public class Bomba extends Elemento implements Destruible {
 
     public Bomba(Escenario escenario, Posicion posicion, int radio) {
         super(escenario, posicion);
-        this.radio = 1;
+        this.radio = radio;
     }
 
     @Override
@@ -14,6 +14,10 @@ public class Bomba extends Elemento implements Destruible {
     public void explotar() {
         System.out.println("Explotando bomba!!");
         escenario.destruirElementos(posicion, radio);
+    }
+
+    public int getRadio() {
+        return radio;
     }
 }
 

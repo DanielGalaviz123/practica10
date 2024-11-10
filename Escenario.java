@@ -14,6 +14,10 @@ public class Escenario {
         campoDeBatalla[p.getRenglon()][p.getColumna()] = e;
     }
 
+    public Elemento getElementoEnPosicion(int renglon, int columna) {
+        return campoDeBatalla[renglon][columna];
+    }
+
     public void destruirElementos(Posicion p, int radio) {
         ArrayList<Elemento> elementosADestruir = new ArrayList<>();
 
@@ -56,4 +60,3 @@ public class Escenario {
         return sb.toString();
     }
 }
-
